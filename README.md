@@ -1,7 +1,7 @@
 # Privacy Policy  
 **Effective Date:** March 28, 2025  
 **App Name:** Car Photo Editor Pro: Carify  
-**Developer:** ACCS-LAB
+**Developer:** AHMET SALIH YALCIN
 
 ---
 
