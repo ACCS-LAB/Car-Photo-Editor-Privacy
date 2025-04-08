@@ -7,9 +7,9 @@
   <style>
     :root {
       --main-color: #8E94F2;
-      --secondary-color: #0A0D20;
       --accent-color: #FF6B6B;
-      --bg-gradient: linear-gradient(120deg, #0A0D20, #161A3A, #0A0D20);
+      --bg-gradient: linear-gradient(135deg, #1f1c2c, #928dab);
+      --text-color: #ffffff;
     }
 
     * {
@@ -21,26 +21,29 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: var(--bg-gradient);
-      color: #e0e0e0;
-      line-height: 1.8;
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 40px 20px;
       overflow-x: hidden;
-      animation: bgScroll 20s infinite linear;
     }
 
-    @keyframes bgScroll {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+      animation: fadeIn 1s ease-out;
     }
 
     header {
       text-align: center;
-      padding: 60px 20px;
-      background: transparent;
+      margin-bottom: 40px;
     }
 
     header h1 {
-      font-size: 40px;
+      font-size: 36px;
       background: linear-gradient(to right, var(--main-color), var(--accent-color));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -52,133 +55,123 @@
       100% { background-position: 100% 50%; }
     }
 
-    main {
-      max-width: 900px;
-      margin: auto;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 16px;
-      padding: 40px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-      backdrop-filter: blur(10px);
-      animation: fadeIn 1.5s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     h2 {
-      margin-top: 40px;
-      color: var(--main-color);
+      color: var(--accent-color);
+      margin-top: 30px;
       font-size: 22px;
     }
 
     p, li {
       margin-top: 12px;
-      color: #d0d0d0;
+      color: #ddd;
+    }
+
+    strong {
+      color: var(--main-color);
     }
 
     ul {
       padding-left: 20px;
     }
 
-    .warning {
-      background: rgba(255, 193, 7, 0.2);
-      color: #ffc107;
-      padding: 15px;
-      border-left: 4px solid #ffc107;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-
     a {
-      color: #8E94F2;
+      color: var(--accent-color);
       text-decoration: none;
-      transition: 0.3s;
     }
 
-    a:hover {
-      color: #FF6B6B;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px;
-      color: #999;
-      font-size: 14px;
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Privacy Policy – Carify AI</h1>
+    </header>
 
-  <header>
-    <h1>Privacy Policy</h1>
-    <p>Last Updated: April 7, 2025</p>
-  </header>
-
-  <main>
-    <p><strong>Applies to:</strong> carify-ai.com website and the Carify mobile application</p>
+    <p><strong>Last Updated:</strong> April 7, 2025<br>
+    <strong>Applies to:</strong> carify-ai.com website and the Carify mobile application</p>
 
     <h2>1. Introduction</h2>
     <p>At Carify AI (“we”, “our”, “the app”), we respect your privacy. This Privacy Policy explains what personal data we collect when you use the app, how we process this data, and your rights regarding your data.</p>
-    <div class="warning">⚠️ All users of the app are deemed to have read and accepted this policy.</div>
+    <p>⚠️ Warning: All users of the app are deemed to have read and accepted this policy. Carify is not responsible for any misuse of data or user errors occurring during usage.</p>
 
     <h2>2. Data Collected</h2>
+    <p>We may collect the following data from users:</p>
     <ul>
-      <li>Identity information (name, surname, email)</li>
-      <li>Vehicle photos and uploaded media</li>
-      <li>Technical info (IP, device type, OS)</li>
-      <li>Usage data (clicks, features used)</li>
-      <li>Location data (if permission granted)</li>
+      <li>Identity information such as name, surname, and email address</li>
+      <li>Vehicle photos and media files uploaded by the user</li>
+      <li>Technical information such as IP address, device type, and operating system</li>
+      <li>Usage data such as feature usage and clicks</li>
+      <li>Location data (only if permission is granted)</li>
     </ul>
 
     <h2>3. Purpose of Data Usage</h2>
+    <p>Collected data is used for the following purposes:</p>
     <ul>
-      <li>Provide app services</li>
-      <li>Operate AI algorithms</li>
-      <li>Ensure system security and error tracking</li>
-      <li>Fulfill legal obligations</li>
-      <li>Develop new features</li>
+      <li>Providing app services</li>
+      <li>Operating the AI algorithm</li>
+      <li>System security and error tracking</li>
+      <li>Fulfilling legal obligations</li>
+      <li>Developing new features</li>
     </ul>
 
     <h2>4. Data Sharing</h2>
-    <p>Data may be shared with service providers, legal authorities, or third parties with your consent. <strong>Carify never shares data for marketing or advertising purposes.</strong></p>
+    <p>Personal data may be shared under the following circumstances:</p>
+    <ul>
+      <li>With necessary service providers (e.g., hosting, analytics, payment infrastructure)</li>
+      <li>With official authorities, if legally required</li>
+      <li>With third parties, only with the user's explicit consent</li>
+    </ul>
+    <p>Carify does not share any data for marketing, sales, or advertising purposes without permission.</p>
 
     <h2>5. Data Retention</h2>
-    <p>Data is kept only as long as needed. Deleting your account erases all data, except legal requirements.</p>
+    <p>Personal data is retained as long as necessary to provide the service. If the user deletes their account, all data will be permanently deleted. Certain data may be retained longer to comply with legal obligations.</p>
 
     <h2>6. Security</h2>
-    <p>We apply security measures to protect your data. Online environments cannot guarantee 100% security.</p>
+    <p>Carify implements technical and organizational measures to protect your data. However, 100% security cannot be guaranteed in online environments. Users acknowledge that they are responsible for sharing any sensitive information.</p>
 
     <h2>7. User Rights</h2>
-    <p>You may access, correct, delete, object, or request portability of your data. Contact: <a href="mailto:info@carify-ai.com">info@carify-ai.com</a></p>
+    <p>Users have the following rights:</p>
+    <ul>
+      <li>Access to their personal data</li>
+      <li>Request correction or deletion of their data</li>
+      <li>Object to the processing of their data</li>
+      <li>Request data portability</li>
+    </ul>
+    <p>To exercise these rights, please contact us at: <a href="mailto:info@carify-ai.com">info@carify-ai.com</a></p>
 
     <h2>8. Not Intended for Children</h2>
-    <p>Not for users under 13. Users under 18 require parental consent. Data from minors is promptly deleted.</p>
+    <p>Carify is not intended for individuals under the age of 13. Users under 18 must use the app with parental consent. Any data collected unknowingly from minors will be promptly deleted.</p>
 
     <h2>9. Changes</h2>
-    <p>Policy updates will be posted on our website and take effect upon publication.</p>
+    <p>This policy may be updated from time to time. The current version will be published on carify-ai.com and become effective upon publication. Users are responsible for keeping up to date with any changes.</p>
 
     <h2>10. Disclaimer</h2>
-    <p>Carify disclaims responsibility for user errors, third-party issues, or data loss. Use at your own risk.</p>
+    <p>Carify accepts no legal or financial responsibility for user errors, external attacks, data loss, or any outcomes arising from the user's interactions with third parties. The use of the app is entirely at the user’s discretion and responsibility.</p>
 
-    <h2>11. Image Editing & AI Disclaimer</h2>
-    <ul>
-      <li>Users must have rights to upload content.</li>
-      <li>Generated images are for personal use only.</li>
-      <li>Prohibited in insurance claims, legal documents, etc.</li>
-    </ul>
+    <h2>11. Image Editing, AI Generation, and Legal Disclaimer</h2>
+    <p>Carify provides a service where users can apply AI-powered image editing, manipulations, and style changes to vehicle photos they upload. These edits are initiated by the user, and results are automatically generated by our systems. The following terms apply to this service:</p>
+
+    <h3>11.1. Content Responsibility</h3>
+    <p>All photos, images, and media uploaded by users must belong to them or they must have legal rights to use them. Carify is not obligated to check uploaded images for copyright, personality rights, ownership rights, trademark rights, or similar legal concerns. Responsibility for any plates, individuals, locations, or identifiable elements in the images lies solely with the user.</p>
+
+    <h3>11.2. Use of Image Editing Results</h3>
+    <p>AI-generated images are provided solely for visual presentation and personal use. No guarantees are given regarding accuracy or technical validity. If such images are used for purposes like second-hand sales, vehicle insurance, expert reports, notary processes, traffic registration documents, insurance claims, vehicle appraisals, car dealership presentations, declarations to authorities, or any other critical processes, the user is solely responsible for any resulting damage, misinformation, misjudgment, or legal consequences.</p>
+
+    <h3>11.3. Commercial and Public Use</h3>
+    <p>If the user decides to use the edited images in listings, advertising campaigns, social media posts, commercial marketing, or in any other presentation to third parties, they bear full responsibility for such use. Carify cannot be held responsible for any perception, commercial loss, deception, or infringement of rights resulting from user-published or shared images.</p>
+
+    <h3>11.4. Prohibition of Use in Insurance and Official Procedures</h3>
+    <p>Images provided by Carify are not intended to be used as official documents or declarations for insurance companies. Using these images in claims files, policy processes, expert evaluations, or traffic incident reports is prohibited. Carify bears no responsibility for any regulatory penalties, policy cancellations, claim refunds, or legal actions that may arise from such use.</p>
+
+    <h3>11.5. General Legal Notice</h3>
+    <p>Carify has no obligation to monitor, control, or approve any content created by users through image editing. The user declares that all content they create complies with current laws and regulations and does not infringe upon third-party rights. The user acknowledges and accepts full responsibility for any direct or indirect damage, loss, legal claim, or demand arising from their use of the Carify system.</p>
 
     <h2>12. Contact</h2>
-    <p>For privacy questions, email: <a href="mailto:info@carify-ai.com">info@carify-ai.com</a></p>
-
-  </main>
-
-  <footer>
-    &copy; 2025 Carify AI. All rights reserved.
-  </footer>
-
+    <p>For any questions regarding privacy, please contact: <a href="mailto:info@carify-ai.com">info@carify-ai.com</a></p>
+  </div>
 </body>
 </html>
